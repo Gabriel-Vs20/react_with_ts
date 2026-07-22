@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FirstComponent from './components/FirstComponent'
+
+const name: string = "Gabriel"
+const age: number = 22
+const trueOrFalse : boolean = true
+
+const userGretting = (name: string): string =>{
+  return `Olá, ${name}`
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <><div>
+      <h1>React + TypeScript + {name} + {age} anos</h1>
+    </div><div>
+        {trueOrFalse && (
+          <p>Teste</p>
+        )}
+      </div>
+      <h3>{userGretting(name)}</h3>
+      <>{FirstComponent()}</>
+      </>
+      
   );
 }
-
 export default App;
