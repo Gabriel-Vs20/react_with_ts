@@ -1,5 +1,9 @@
 import React from 'react';
-import FirstComponent from './components/FirstComponent'
+import FirstComponent from './components/FirstComponent';
+import SecondComponent from './components/SecondComponent';
+import Destructuring from './components/Destructuring';
+import State from './components/State';
+
 
 const name: string = "Gabriel"
 const age: number = 22
@@ -11,7 +15,8 @@ const userGretting = (name: string): string =>{
 
 function App() {
   return (
-      <><div>
+      <>
+      <div>
       <h1>React + TypeScript + {name} + {age} anos</h1>
     </div><div>
         {trueOrFalse && (
@@ -19,7 +24,10 @@ function App() {
         )}
       </div>
       <h3>{userGretting(name)}</h3>
-      <>{FirstComponent()}</>
+      <FirstComponent />
+      <SecondComponent name = "Gabriel"/>
+      <Destructuring title = "HP" content = "Algum conteúdo" commentsQty = {12} tags = {["1", "2", "3"]}/>
+      <State />
       </>
       
   );
